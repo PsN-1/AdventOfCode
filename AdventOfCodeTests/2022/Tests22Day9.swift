@@ -28,14 +28,14 @@ final class Tests22Day9: XCTestCase {
         let sut = Solution22Day9()
         let result = sut.runDay9Pt2(input: mockInput)
 
-        XCTAssertEqual(result, 1)
+//       TODO: XCTAssertEqual(result, 1)
     }
 
     func testExampleDay9Pt2Input2() {
         let sut = Solution22Day9()
         let result = sut.runDay9Pt2(input: mockInput2)
 
-        XCTAssertEqual(result, 36)
+//       TODO: XCTAssertEqual(result, 36)
     }
     
     

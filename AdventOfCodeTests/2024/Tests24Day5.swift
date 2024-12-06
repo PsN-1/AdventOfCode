@@ -6,6 +6,12 @@ struct Update {
     var isSafe: Bool = false
 }
 
+extension Array where Element == Update {
+    mutating func reset() {
+        self = self.map { Update(firstIndex: $0.firstIndex, secondIndex: $0.secondIndex) }
+    }
+}
+
 class Tests24Day5: XCTestCase {
     
     func testDay2Example() { solutionDay5(input: inputExample, input2: inputExample2, expected: 143) }
@@ -15,9 +21,7 @@ class Tests24Day5: XCTestCase {
     
     func solutionDay5Pt2(input: String, input2: String, expected: Int) {
         let input = input.components(separatedBy: "\n").map { $0.components(separatedBy: "|") }
-        var dictInput = input.map { update in
-            return Update(firstIndex: update[0], secondIndex: update[1])
-        }
+        var dictInput = input.map { Update(firstIndex: $0[0], secondIndex: $0[1]) }
         let input2 = input2.components(separatedBy: "\n").map { $0.components(separatedBy: ",") }
         
         var unsafeInput = [[String]]()
@@ -40,10 +44,9 @@ class Tests24Day5: XCTestCase {
         
         var saveCount = 0
         for i in 0..<unsafeInput.count {
-            for z in 0..<dictInput.count { dictInput[z].isSafe = false }
+            dictInput.reset()
             while dictInput.contains(where: { $0.isSafe == false }) {
                 for j in 0..<dictInput.count {
-//                    dictInput[j].isSafe = false
                     guard let indexFirstPage = unsafeInput[i].firstIndex(of: dictInput[j].firstIndex),
                           let indexSecondPage = unsafeInput[i].firstIndex(of: dictInput[j].secondIndex)
                     else {
@@ -61,29 +64,7 @@ class Tests24Day5: XCTestCase {
             let middleIndex = unsafeInput[i].count / 2
             saveCount += Int(unsafeInput[i][middleIndex])!
         }
-        print(dictInput)
-        print(unsafeInput)
-//        var count2 = 0
-//        unsafeInput.forEach { update in
-//            var isSafe = true
-//            for i in 0..<input.count {
-//                guard let indexFirstPage = update.firstIndex(of: input[i][0]),
-//                      let indexSecondPage = update.firstIndex(of: input[i][1])
-//                else { continue }
-//                if indexFirstPage > indexSecondPage {
-//                    isSafe = false
-//                    break
-//                }
-//            }
-//            if isSafe {
-//                let middleIndex = update.count / 2
-//                count2 += Int(update[middleIndex])!
-//            } else {
-//                print("STILL NOT SAFE")
-//            }
-//        }
         
-//        print(unsafeInput)
         XCTAssertEqual(saveCount, expected)
     }
 
