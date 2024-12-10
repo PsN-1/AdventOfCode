@@ -1,26 +1,26 @@
 import XCTest
 
-typealias Antenas = [Antena]
-struct Antena {
-    let id: Character
-    var coordinates: [(Int, Int)] = []
-    
-    init(id: Character, coordinates: [(Int, Int)]) {
-        self.id = id
-        self.coordinates = coordinates
-    }
-    
-    init(id: Character, coordinates: (Int, Int)) {
-        self.id = id
-        self.coordinates.append(coordinates)
-    }
-}
-
 class Tests24Day8: XCTestCase {
-    func testDay2Example() { solutionDay8(input: inputExample, expected: 14) }
-    func testDay2() { solutionDay8(input: input, expected: 341) }
-    func testDay2Pt2Example() { solutionDay8Pt2(input: inputExample, expected: 34) }
-    func testDay2Pt2() { solutionDay8Pt2(input: input, expected: 1134) }
+    typealias Antenas = [Antena]
+    struct Antena {
+        let id: Character
+        var coordinates: [(Int, Int)] = []
+        
+        init(id: Character, coordinates: [(Int, Int)]) {
+            self.id = id
+            self.coordinates = coordinates
+        }
+        
+        init(id: Character, coordinates: (Int, Int)) {
+            self.id = id
+            self.coordinates.append(coordinates)
+        }
+    }
+    
+    func testDay8Example() { solutionDay8(input: inputExample, expected: 14) }
+    func testDay8() { solutionDay8(input: input, expected: 341) }
+    func testDay8Pt2Example() { solutionDay8Pt2(input: inputExample, expected: 34) }
+    func testDay8Pt2() { solutionDay8Pt2(input: input, expected: 1134) }
     
  
     func solutionDay8Pt2(input: String, expected: Int) {

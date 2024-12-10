@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		660897922CFECE1B00705F42 /* Tests24Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660897912CFECE1B00705F42 /* Tests24Day3.swift */; };
+		664CFE0C2D06FA95002E183F /* Tests24Day9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CFE0B2D06FA95002E183F /* Tests24Day9.swift */; };
 		665DFDEE294F5AF600B16DB0 /* Solution22Day10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665DFDED294F5AF600B16DB0 /* Solution22Day10.swift */; };
 		665DFDF0294F5B1A00B16DB0 /* Tests22Day10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665DFDEF294F5B1A00B16DB0 /* Tests22Day10.swift */; };
 		66612A532CFDFEDF00CAE41A /* Tests24Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66612A522CFDFEDF00CAE41A /* Tests24Day2.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		660897912CFECE1B00705F42 /* Tests24Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests24Day3.swift; sourceTree = "<group>"; };
+		664CFE0B2D06FA95002E183F /* Tests24Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests24Day9.swift; sourceTree = "<group>"; };
 		665DFDED294F5AF600B16DB0 /* Solution22Day10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution22Day10.swift; sourceTree = "<group>"; };
 		665DFDEF294F5B1A00B16DB0 /* Tests22Day10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests22Day10.swift; sourceTree = "<group>"; };
 		66612A522CFDFEDF00CAE41A /* Tests24Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests24Day2.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				6693DFD32D0314A50026FC74 /* Tests24Day6.swift */,
 				667ECD582D0411EE005DABCC /* Tests24Day7.swift */,
 				668F83DE2D05CA080079A7FC /* Tests24Day8.swift */,
+				664CFE0B2D06FA95002E183F /* Tests24Day9.swift */,
 			);
 			path = 2024;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				665DFDF0294F5B1A00B16DB0 /* Tests22Day10.swift in Sources */,
 				66B0596E2940DD9B00843895 /* Tests22Day7.swift in Sources */,
 				66B059612940CA4E00843895 /* AdventOfCodeTests.swift in Sources */,
+				664CFE0C2D06FA95002E183F /* Tests24Day9.swift in Sources */,
 				66E73EDC2943983C00740B08 /* Tests22Day9.swift in Sources */,
 				660897922CFECE1B00705F42 /* Tests24Day3.swift in Sources */,
 				66612A532CFDFEDF00CAE41A /* Tests24Day2.swift in Sources */,
